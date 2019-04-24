@@ -7,13 +7,10 @@
 #include "Arduino.h"
 #include "NeoFunctions.h"
 
-NeoFunctions::NeoFunctions(int pin)
-{
-  pinMode(pin, OUTPUT);
-  _pin = pin;
-}
+NeoFunctions::NeoFunctions()
+{}
 
-void NewoFunctions::cwc()
+void NeoFunctions::cwc()
 	{	int i; int w =0;
 		for(i = 0; i < 16 ; i++){
 			  //    strip.setPixelColor(pin number , strip.Color( red value,green value , blue value ,white value ) );
@@ -25,7 +22,7 @@ void NewoFunctions::cwc()
 	  if  (w > 255) w = 0;
 	} 
 
-void NewoFunctions::clear()
+void NeoFunctions::clear()
 {
   digitalWrite(_pin, HIGH);
   delay(1000);
